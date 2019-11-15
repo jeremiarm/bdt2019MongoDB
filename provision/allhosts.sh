@@ -1,5 +1,10 @@
 # Add hostname
-sudo cp /vagrant/sources/hosts /etc/hosts
+sudo bash -c \\"echo '192.168.33.102 mongo-config-1' >> /etc/hosts\\"
+sudo bash -c \\"echo '192.168.33.103 mongo-config-2' >> /etc/hosts\\"
+sudo bash -c \\"echo '192.168.33.104 mongo-query-router' >> /etc/hosts\\"
+sudo bash -c \\"echo '192.168.33.105 mongo-shard-1' >> /etc/hosts\\"
+sudo bash -c \\"echo '192.168.33.106 mongo-shard-2' >> /etc/hosts\\"
+sudo bash -c \\"echo '192.168.33.107 mongo-shard-3' >> /etc/hosts\\"
 
 # Copy APT sources list
 sudo cp /vagrant/sources/sources.list /etc/apt/
