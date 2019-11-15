@@ -1,0 +1,31 @@
+config server 2
+data/shard server 3
+query router 1
+
+Server Config:
+mongo-config-1 :
+OS: ubuntu-18.04
+RAM: 1024 MB
+IP: 192.168.33.102
+mongo-config-2 :
+OS: ubuntu-18.04
+RAM: 1024 MB
+IP: 192.168.33.103
+Query Router:
+mongo-query-router :
+OS: ubuntu-18.04
+RAM: 1024 MB
+IP: 192.168.33.104
+Server Data/Shard:
+mongo-shard-1 :
+OS: ubuntu-18.04
+RAM: 1024 MB
+IP: 192.168.33.105
+mongo-shard-2 :
+OS: ubuntu-18.04
+RAM: 1024 MB
+IP: 192.168.33.106
+mongo-shard-3 :
+OS: ubuntu-18.04
+RAM: 1024 MB
+IP: 192.168.33.107
