@@ -3,3 +3,11 @@
 3. initialize config server(perhatikan spasi)
 4. initialize query router(perhatikan spasi)
 5.add shards to cluser(sharding uncomment dengan shardsvr)
+
+database = mobilegames
+collection = mobilegamesCollection
+
+username = mongo-admin
+password = password
+
+mongoimport --host 192.168.16.53 --port 27017 --db mobilegames --collection mobilegamesCollection --file /vagrant/appstore_games.csv --type csv --headerline
