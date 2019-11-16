@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "mongo_config_1" do |mongo_config_1|
     mongo_config_1.vm.hostname = "mongo-config-1"
     mongo_config_1.vm.box = "bento/ubuntu-18.04"
-    mongo_config_1.vm.network "private_network", ip: "192.168.33.102"
+    mongo_config_1.vm.network "private_network", ip: "192.168.16.51"
     
     mongo_config_1.vm.provider "virtualbox" do |vb|
       vb.name = "mongo-config-1"
@@ -14,13 +14,13 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
     end
 
-    mongo_config_1.vm.provision "shell", path: "provision/allhosts.sh", privileged: false
+    mongo_config_1.vm.provision "shell", path: "sh/allhosts.sh", privileged: false
   end
 
   config.vm.define "mongo_config_2" do |mongo_config_2|
     mongo_config_2.vm.hostname = "mongo-config-2"
     mongo_config_2.vm.box = "bento/ubuntu-18.04"
-    mongo_config_2.vm.network "private_network", ip: "192.168.33.103"
+    mongo_config_2.vm.network "private_network", ip: "192.168.16.52"
     
     mongo_config_2.vm.provider "virtualbox" do |vb|
       vb.name = "mongo-config-2"
@@ -28,13 +28,13 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
     end
 
-    mongo_config_2.vm.provision "shell", path: "provision/allhosts.sh", privileged: false
+    mongo_config_2.vm.provision "shell", path: "sh/allhosts.sh", privileged: false
   end
 
   config.vm.define "mongo_query_router" do |mongo_query_router|
     mongo_query_router.vm.hostname = "mongo-query-router"
     mongo_query_router.vm.box = "bento/ubuntu-18.04"
-    mongo_query_router.vm.network "private_network", ip: "192.168.33.104"
+    mongo_query_router.vm.network "private_network", ip: "192.168.16.53"
     
     mongo_query_router.vm.provider "virtualbox" do |vb|
       vb.name = "mongo-query-router"
@@ -42,13 +42,13 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
     end
 
-    mongo_query_router.vm.provision "shell", path: "provision/allhosts.sh", privileged: false
+    mongo_query_router.vm.provision "shell", path: "sh/allhosts.sh", privileged: false
   end
 
   config.vm.define "mongo_shard_1" do |mongo_shard_1|
     mongo_shard_1.vm.hostname = "mongo-shard-1"
     mongo_shard_1.vm.box = "bento/ubuntu-18.04"
-    mongo_shard_1.vm.network "private_network", ip: "192.168.33.105"
+    mongo_shard_1.vm.network "private_network", ip: "192.168.16.54"
         
     mongo_shard_1.vm.provider "virtualbox" do |vb|
       vb.name = "mongo-shard-1"
@@ -56,13 +56,13 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
     end
 
-    mongo_shard_1.vm.provision "shell", path: "provision/allhosts.sh", privileged: false
+    mongo_shard_1.vm.provision "shell", path: "sh/allhosts.sh", privileged: false
   end
 
   config.vm.define "mongo_shard_2" do |mongo_shard_2|
     mongo_shard_2.vm.hostname = "mongo-shard-2"
     mongo_shard_2.vm.box = "bento/ubuntu-18.04"
-    mongo_shard_2.vm.network "private_network", ip: "192.168.33.106"
+    mongo_shard_2.vm.network "private_network", ip: "192.168.16.55"
     
     mongo_shard_2.vm.provider "virtualbox" do |vb|
       vb.name = "mongo-shard-2"
@@ -70,13 +70,13 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
     end
 
-    mongo_shard_2.vm.provision "shell", path: "provision/allhosts.sh", privileged: false
+    mongo_shard_2.vm.provision "shell", path: "sh/allhosts.sh", privileged: false
   end
 
   config.vm.define "mongo_shard_3" do |mongo_shard_3|
     mongo_shard_3.vm.hostname = "mongo-shard-3"
     mongo_shard_3.vm.box = "bento/ubuntu-18.04"
-    mongo_shard_3.vm.network "private_network", ip: "192.168.33.107"
+    mongo_shard_3.vm.network "private_network", ip: "192.168.16.56"
     
     mongo_shard_3.vm.provider "virtualbox" do |vb|
       vb.name = "mongo-shard-3"
@@ -84,7 +84,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
     end
 
-    mongo_shard_3.vm.provision "shell", path: "provision/allhosts.sh", privileged: false
+    mongo_shard_3.vm.provision "shell", path: "sh/allhosts.sh", privileged: false
   end
 
 end

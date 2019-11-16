@@ -1,0 +1,5 @@
+1.vagrant up
+2. ssh 1 config server, ikut tutorial create admin user
+3. initialize config server(perhatikan spasi)
+4. initialize query router(perhatikan spasi)
+5.add shards to cluser(sharding uncomment dengan shardsvr)
