@@ -4,10 +4,15 @@
 4. initialize query router(perhatikan spasi)
 5.add shards to cluser(sharding uncomment dengan shardsvr)
 
-database = mobilegames
-collection = mobilegamesCollection
+database = shoes
+collection = shoesCollection
 
 username = mongo-admin
 password = password
 
-mongoimport --host 192.168.16.53 --port 27017 --db mobilegames --collection mobilegamesCollection --file /vagrant/appstore_games.csv --type csv --headerline
+mongoimport --host 192.168.16.53 --port 27017 --db shoes --collection shoesCollection --file /vagrant/meta-data.csv --type csv --headerline
+
+
+'CID', 'Category','SubCategory','HeelHeight',
+'Insole','Closure','Gender','Material','ToeStyle'
+    
