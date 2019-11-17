@@ -20,7 +20,7 @@ class ShoeController extends Controller
     }
     public function index2()
     {
-        $shoes=Shoe::where('SubCategory', 'like', 'HEAL')->paginate(10);
+        $shoes=Shoe::where('SubCategory', 'like', 'HEEL')->paginate(10);
         return view('shoeindex',compact('shoes'));
     }
     public function create()
@@ -29,20 +29,21 @@ class ShoeController extends Controller
     }
     public function store(Request $request)
     {
-        // $shoe = new Shoe();
-        // $shoe->_id =
-        // $shoe->CID = $request->get('CID');
-        // $shoe->Category = $request->get('Category');
-        // $shoe->SubCategory = $request->get('SubCategory');
-        // $shoe->HeelHeight = $request->get('HeelHeight');
-        // $shoe->Insole = $request->get('Insole');
-        // $shoe->Closure = $request->get('Closure');
-        // $shoe->Gender = $request->get('Gender');
-        // $shoe->Material = $request->get('Material');
-        // $shoe->ToeStyle = $request->get('ToeStyle');
-        // //dd(DB::connection('mongodb')); 
-        // $shoe->save(); 
-        $data=array(	
+
+
+        Shoe::create([
+        	'CID' => $request->get('CID'),
+        	'Category' => $request->get('Category'),
+        	'SubCategory' => $request->get('SubCategory'),
+        	'HeelHeight' => $request->get('HeelHeight'),
+        	'Insole' => $request->get('Insole'),
+        	'Closure' => $request->get('Closure'),
+        	'Gender' => $request->get('Gender'),
+        	'Material' => $request->get('Material'),
+        	'ToeStyle' => $request->get('ToeStyle')
+        ]); 
+
+        /*$data=array(	
                      'CID' => $request->get('CID'),
                      'Category' => $request->get('Category'),
                      'SubCategory' => $request->get('SubCategory'),
@@ -52,8 +53,9 @@ class ShoeController extends Controller
                      'Gender' => $request->get('Gender'),
                      'Material' => $request->get('Material'),
                      'ToeStyle' => $request->get('ToeStyle'));
-        DB::collection('shoesCollection')->where('CID',$request->get('CID'))->update($data , array('upsert' => true));    
+        DB::collection('shoesCollection')->insert($data);*/  
         return redirect('shoe')->with('success', 'Shoe has been successfully added');
+        
     }
     public function destroy($_id)
     {

@@ -20,4 +20,6 @@ class Shoe extends Eloquent
         'CID', 'Category','SubCategory','HeelHeight','Insole','Closure','Gender','Material','ToeStyle'
     ];
     protected $guarded = ['_id'];
+
+    
 }
