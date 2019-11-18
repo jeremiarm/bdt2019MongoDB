@@ -3,7 +3,7 @@
 # Implementasi Cluster MongoDB
 
 ## Spesifikasi
-Vagrant
+Vagrant <br />
 IP Config server 1 : 192.168.16.51 <br />
 IP Config server 2 : 192.168.16.52 <br />
 IP Query Router    : 192.168.16.53 <br />
