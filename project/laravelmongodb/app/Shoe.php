@@ -21,5 +21,5 @@ class Shoe extends Eloquent
     ];
     protected $guarded = ['_id'];
 
-    
+    public $timestamps = false;    
 }

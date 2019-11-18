@@ -41,7 +41,9 @@ class ShoeController extends Controller
         $shoe->Material = $request->get('Material');
         $shoe->ToeStyle = $request->get('ToeStyle');
         $shoe->save();
-        return redirect('shoe')->with('success', 'Shoe has been successfully added');
+        $_id=$shoe->_id;
+        $message=sprintf("Shoe with _id %s has been successfully added",$_id);
+        return redirect('shoe')->with('success', $message);
         
     }
     public function destroy($_id)
