@@ -61,7 +61,8 @@ class ShoeController extends Controller
     {
         $shoe = Shoe::find($_id);
         $shoe->delete();
-        return redirect('shoe')->with('success','Shoe has been  deleted');
+        $message=sprintf("Shoe %s has been successfully deleted",$_id);
+        return redirect('shoe')->with('success',$message);
     }
     public function edit($_id)
     {
@@ -82,6 +83,7 @@ class ShoeController extends Controller
         $shoe->ToeStyle = $request->get('ToeStyle');
         //dd(DB::connection('mongodb')); 
         $shoe->save();
-        return redirect('shoe')->with('success', 'Shoe has been successfully updated');
+        $message=sprintf("Shoe %s has been successfully updated",$_id);
+        return redirect('shoe')->with('success', $message);
     }
 }
