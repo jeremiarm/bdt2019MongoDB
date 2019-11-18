@@ -277,8 +277,16 @@ db.shoesCollection.getShardDistribution()
 ```
 
 # Implementasi CRUD
-Menggunakan Laravel PHP dengan plug in https://github.com/jenssegers/laravel-mongodb . Ubah memory limit di php.ini menjadi -1 dan jalankan web dengan php -S localhost:8000 -t public/
+Menggunakan Laravel PHP dengan plug in https://github.com/jenssegers/laravel-mongodb . Ubah file .env.example menjadi .env. Ubah memory limit di php.ini menjadi -1 dan jalankan web dengan php -S localhost:8000 -t public/
 ## Operasi Create
+![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoecreate1.jpg)
+<br />
+![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoecreate2.jpg)
+<br />
+![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoecreate3.jpg)
+<br />
+![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoecreate4.jpg)
+<br />
 ## Operasi Read
 ![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoeread.jpg)
 <br />
