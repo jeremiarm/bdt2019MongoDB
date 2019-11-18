@@ -30,30 +30,17 @@ class ShoeController extends Controller
     public function store(Request $request)
     {
 
-        //dd(DB::connection());
-        Shoe::create([
-        	'CID' => $request->get('CID'),
-        	'Category' => $request->get('Category'),
-        	'SubCategory' => $request->get('SubCategory'),
-        	'HeelHeight' => $request->get('HeelHeight'),
-        	'Insole' => $request->get('Insole'),
-        	'Closure' => $request->get('Closure'),
-        	'Gender' => $request->get('Gender'),
-        	'Material' => $request->get('Material'),
-        	'ToeStyle' => $request->get('ToeStyle')
-        ]); 
-
-        /*$data=array(	
-                     'CID' => $request->get('CID'),
-                     'Category' => $request->get('Category'),
-                     'SubCategory' => $request->get('SubCategory'),
-                     'HeelHeight' => $request->get('HeelHeight'),
-                     'Insole' => $request->get('Insole'),
-                     'Closure' => $request->get('Closure'),
-                     'Gender' => $request->get('Gender'),
-                     'Material' => $request->get('Material'),
-                     'ToeStyle' => $request->get('ToeStyle'));
-        DB::collection('shoesCollection')->insert($data);*/  
+        $shoe = new Shoe();
+        $shoe->CID = $request->get('CID');
+        $shoe->Category = $request->get('Category');
+        $shoe->SubCategory = $request->get('SubCategory');
+        $shoe->HeelHeight = $request->get('HeelHeight');
+        $shoe->Insole = $request->get('Insole');
+        $shoe->Closure = $request->get('Closure');
+        $shoe->Gender = $request->get('Gender');
+        $shoe->Material = $request->get('Material');
+        $shoe->ToeStyle = $request->get('ToeStyle');
+        $shoe->save();
         return redirect('shoe')->with('success', 'Shoe has been successfully added');
         
     }
@@ -62,7 +49,7 @@ class ShoeController extends Controller
         $shoe = Shoe::find($_id);
         $shoe->delete();
         $message=sprintf("Shoe %s has been successfully deleted",$_id);
-        return redirect('shoe')->with('success',$message);
+        return redirect('shoe')->with('success', $message);
     }
     public function edit($_id)
     {
