@@ -270,16 +270,35 @@ perintah ini akan mengimport file csv dalam folder root vagrant pada db shoes <b
 mongo mongo-query-router:27017 -u mongo-admin -p --authenticationDatabase admin
 ```
 dengan password password <br />
-5. Masuk ke database shoe dengan ``use shoe``
+5. Masuk ke database shoe dengan ``use shoe`` <br />
 6. Cek distribusi data dengan masuk ke salah satu shard server <br />
 ```
 db.shoesCollection.getShardDistribution()
 ```
 
 # Implementasi CRUD
+Menggunakan Laravel PHP dengan plug in https://github.com/jenssegers/laravel-mongodb . Ubah memory limit di php.ini menjadi -1 dan jalankan web dengan php -S localhost:8000 -t public/
 ## Operasi Create
 ## Operasi Read
-## Operasi Read dengan count
-## Operasi Read dengan Grouping SubCategory Heel
+![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoeread.jpg)
+<br />
+### Read dengan Grouping SubCategory Heel
+![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoeread2.jpg)
+<br />
+### Read jumlah data
+![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoecount.jpg)
+<br />
 ## Operasi Update
+![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoeupdate1.jpg)
+<br />
+![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoeupdate2.jpg)
+<br />
+![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoeupdate3.jpg)
+<br />
+![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoeupdate4.jpg)
+<br />
 ## Operasi Delete
+![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoedelete1.jpg)
+<br />
+![alt text](https://github.com/jeremiarm/bdt2019MongoDB/blob/master/documentation/shoedelete2.jpg)
+<br />
