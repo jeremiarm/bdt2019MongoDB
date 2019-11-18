@@ -15,4 +15,3 @@ mongoimport --host 192.168.16.53 --port 27017 --db shoes --collection shoesColle
 
 'CID', 'Category','SubCategory','HeelHeight',
 'Insole','Closure','Gender','Material','ToeStyle'
-    
