@@ -235,7 +235,7 @@ sudo systemctl enable mongos.service
 sudo systemctl start mongos
 ```
 23. Jalankan ``systemctl status mongos``. Proses berhasil jika ada tulisan active <br />
-24. Masuk ke setiap shard dan ubah ``/etc/mongod.cnf`` sehingga bindIp sesuai IP shard masing-masing dan uncomment sharding dan tambahkan `` clusterRole: "configsvr"`` di bawahnya. <br />
+24. Masuk ke setiap shard dan ubah ``/etc/mongod.cnf`` sehingga bindIp sesuai IP shard masing-masing dan uncomment sharding dan tambahkan `` clusterRole: "shardsvr"`` di bawahnya. <br />
 25. Di salah satu shard server, jalankan <br />
 ```
 mongo mongo-query-router:27017 -u mongo-admin -p --authenticationDatabase admin
