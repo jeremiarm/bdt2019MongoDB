@@ -15,3 +15,5 @@ mongoimport --host 192.168.16.53 --port 27017 --db shoes --collection shoesColle
 
 'CID', 'Category','SubCategory','HeelHeight',
 'Insole','Closure','Gender','Material','ToeStyle'
+
+db.shoes.insert({CID: "tes", Category: "tes",SubCategory: "tes", HeelHeight: "tes", Insole: "tes",Closure: "tes",Gender: "tes",Material: "tes",ToeStyle: "tes"})

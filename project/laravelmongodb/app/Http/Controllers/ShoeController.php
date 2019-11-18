@@ -30,7 +30,7 @@ class ShoeController extends Controller
     public function store(Request $request)
     {
 
-
+        //dd(DB::connection());
         Shoe::create([
         	'CID' => $request->get('CID'),
         	'Category' => $request->get('Category'),
